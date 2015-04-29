@@ -2,9 +2,12 @@ package com.beafoodie.usshike.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,11 +17,9 @@ public class Restaurant {
 	private long restaurantId;
 	private String englishName;
 	private String chineseName;
-	private String address1;
-	private String address2;
-	private String city;
-	private String state;
-	private int postCode;
+	private Address address;
+	private int userLike;
+	private int userDislike;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,7 +31,7 @@ public class Restaurant {
 		this.restaurantId = restaurantId;
 	}
 
-	@Column(nullable = false)
+	@Column(name = "englishName", length=50)
 	public String getEnglishName() {
 		return englishName;
 	}
@@ -39,7 +40,7 @@ public class Restaurant {
 		this.englishName = englishName;
 	}
 
-	@Column(nullable = true)
+	@Column(name = "chineseName", length=50)
 	public String getChineseName() {
 		return chineseName;
 	}
@@ -48,49 +49,32 @@ public class Restaurant {
 		this.chineseName = chineseName;
 	}
 
-	@Column(nullable = false)
-	public String getAddress1() {
-		return address1;
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="addressId",nullable = false)
+	public Address getAddress() {
+		return address;
 	}
 
-	public void setAddress1(String address1) {
-		this.address1 = address1;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
-	@Column(nullable = true)
-	public String getAddress2() {
-		return address2;
+	@Column(name = "userLike")
+	public int getUserLike() {
+		return userLike;
 	}
 
-	public void setAddress2(String address2) {
-		this.address2 = address2;
+	public void setUserLike(int userLike) {
+		this.userLike = userLike;
 	}
 
-	@Column(nullable = false)
-	public String getCity() {
-		return city;
+	@Column(name = "userDislike")
+	public int getUserDislike() {
+		return userDislike;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	@Column(nullable = false)
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	@Column(nullable = false)
-	public int getPostCode() {
-		return postCode;
-	}
-
-	public void setPostCode(int postCode) {
-		this.postCode = postCode;
+	public void setUserDislike(int userDislike) {
+		this.userDislike = userDislike;
 	}
 
 }
