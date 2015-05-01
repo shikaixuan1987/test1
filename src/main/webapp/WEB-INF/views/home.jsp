@@ -1,281 +1,545 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
- <% 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<% 
                String path = request.getContextPath(); 
                String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
  %>
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<!DOCTYPE HTML>
 <html>
 <head>
+<meta charste="utf-8">
 <title>beafoodie.com</title>
-<!-- jQuery-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 <script src="resources/js/jquery.min.js"></script>
-<!-- Custom Theme files -->
-<!--theme-style-->
-<link href="resources/css/style.css" rel="stylesheet" type="text/css" media="all" />	
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Kappe Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--fonts-->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
-<!--//fonts-->
-
+<script src="resources/js/jquery.dropotron.min.js"></script>
+<script src="resources/js/jquery.scrolly.min.js"></script>
+<script src="resources/js/jquery.onvisible.min.js"></script>
+<script src="resources/js/skel.min.js"></script>
+<script src="resources/js/skel-layers.min.js"></script>
+<script src="resources/js/init.js"></script>
+<noscript>
+	<link rel="stylesheet" href="resources/css/skel.css" />
+	<link rel="stylesheet" href="resources/css/style.css" />
+	<link rel="stylesheet" href="resources/css/style-desktop.css" />
+	<link rel="stylesheet" href="resources/css/style-noscript.css" />
+</noscript>
+<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
-<body>
-	<div class="header">
-	<!---->
-		<div class="header-left">
-			<div class="logo">
-				<a href="index.html"><img src="resources/images/logo.png" alt=""></a>
-			</div>
-			<div class="top-nav">
-				<ul >
-					<li class="active" ><a href="index.html" >HOME</a></li>
-					<li><a href="work.html" class="black" > WORK</a></li>	
-					<li><a href="about.html" class="black1"> ABOUT</a></li>
-					<li><a href="blog.html" class="black2" > BLOG</a></li>
-					<li><a href="404.html" class="black3" > SERVICES</a></li>
-					<li><a href="contact.html" class="black4" > CONTACT</a></li>
-				</ul>
-			</div>
-			<ul class="social-in">
-				<li><a href="#"><i> </i></a></li>
-				<li><a href="#"><i class="gmail"> </i></a></li>
-				<li><a href="#"><i class="twitter"> </i></a></li>
-				<li><a href="#"><i class="pin"> </i></a></li>
-				<li><a href="#"><i class="dribble"> </i></a></li>
-				<li><a href="#"><i class="behance"> </i></a></li>
-				
-			</ul>
+<body class="homepage">
+
+	<!-- Header -->
+	<div id="header">
+
+		<!-- Inner -->
+		<div class="inner">
+			<header>
+				<h1>
+					<a href="/usshike/" id="logo">食客</a>
+				</h1>
+				<hr />
+				<p>beafoodie.com</p>
+			</header>
+			<footer>
+				<a href="#banner" class="button circled scrolly">开始</a>
+			</footer>
 		</div>
-		<!---->
-		<!---->
-		<div class="header-top">
-			<div class="logo-in">
-				<a href="index.html"><img src="resources/images/logo.png" alt=""></a>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="/usshike/">主页</a></li>
+				<li><a href="left-sidebar.html">去哪吃</a></li>
+				<li><a href="right-sidebar.html">食客榜</a></li>
+				<li><a href="no-sidebar.html">食客圈</a></li>
+				<li><a href="no-sidebar.html">食客新闻</a></li>
+				<li><a href="">美食地图</a>
+					<ul>
+						<li><a href="#">纽约</a></li>
+						<li><a href="#">华盛顿 DC</a></li>
+						<li><a href="#">匹兹堡</a></li>
+						<!-- <li><a href="">And a submenu &hellip;</a>
+							<ul>
+								<li><a href="#">Lorem ipsum dolor</a></li>
+								<li><a href="#">Phasellus consequat</a></li>
+								<li><a href="#">Magna phasellus</a></li>
+								<li><a href="#">Etiam dolore nisl</a></li>
+							</ul></li>
+						<li><a href="#">Veroeros feugiat</a></li>-->
+					</ul></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<!-- Banner -->
+	<section id="banner">
+		<header>
+			<h2>
+				你好！食客终于等到了你！
+			</h2>
+			<p>在这里，你可以找到美味的食物，新奇的餐厅，志同道合的朋友还有为你私人订制的美食评论！
+			</p>
+		</header>
+					<div style="margin-right: -15px;margin-left: -15px;">
+				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
+					<h3 id="counter">0</h3>
+					<h4><strong>认证餐厅</strong></h4>
+				</div>
+				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
+					<h3 id="counter1">0</h3>
+					<h4><strong>食客成员</strong></h4>
+				</div>
+				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
+					<h3 id="counter2">0</h3>
+					<h4 ><strong>精美食评</strong></h4>
+				</div>
 			</div>
-			<div class="top-nav-in">
-			<span class="menu"><img src="resources/images/menu.png" alt=""> </span>
-				<ul >
-					<li class="active" ><a href="index.html" >HOME</a></li>
-					<li><a href="work.html" class="black" > WORK</a></li>	
-					<li><a href="about.html" class="black1"> ABOUT</a></li>
-					<li><a href="blog.html" class="black2" > BLOG</a></li>
-					<li><a href="404.html" class="black3" > SERVICES</a></li>
-					<li><a href="contact.html" class="black4" > CONTACT</a></li>
-				</ul>
-				<script>
-					$("span.menu").click(function(){
-						$(".top-nav-in ul").slideToggle(500, function(){
-						});
-					});
-			</script>
+	</section>
+
+	<!-- Carousel -->
+	<section class="carousel">
+		<div class="reel">
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic01.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Pulvinar sagittis congue</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic02.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Fermentum sagittis proin</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic03.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Sed quis rhoncus placerat</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic04.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Ultrices urna sit lobortis</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic05.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Varius magnis sollicitudin</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic01.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Pulvinar sagittis congue</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic02.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Fermentum sagittis proin</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic03.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Sed quis rhoncus placerat</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic04.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Ultrices urna sit lobortis</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+			<article>
+				<a href="#" class="image featured"><img
+					src="resources/images/pic05.jpg" alt="" /></a>
+				<header>
+					<h3>
+						<a href="#">Varius magnis sollicitudin</a>
+					</h3>
+				</header>
+				<p>Commodo id natoque malesuada sollicitudin elit suscipit
+					magna.</p>
+			</article>
+
+		</div>
+	</section>
+
+	<!-- Main -->
+	<div class="wrapper style2">
+
+		<article id="main" class="container special">
+			<a href="#" class="image featured"><img
+				src="resources/images/pic06.jpg" alt="" /></a>
+			<header>
+				<h2>
+					<a href="#">Sed massa imperdiet magnis</a>
+				</h2>
+				<p>Sociis aenean eu aenean mollis mollis facilisis primis ornare
+					penatibus aenean. Cursus ac enim pulvinar curabitur morbi
+					convallis. Lectus malesuada sed fermentum dolore amet.</p>
+			</header>
+			<p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae
+				suspendisse mauris posuere accumsan massa posuere lacus convallis
+				tellus interdum. Amet nullam fringilla nibh nulla convallis ut
+				venenatis purus sit arcu sociis. Nunc fermentum adipiscing tempor
+				cursus nascetur adipiscing adipiscing. Primis aliquam mus lacinia
+				lobortis phasellus suscipit. Fermentum lobortis non tristique ante
+				proin sociis accumsan lobortis. Auctor etiam porttitor phasellus
+				tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat
+				integer interdum integer purus sapien. Nibh eleifend nulla nascetur
+				pharetra commodo mi augue interdum tellus. Ornare cursus augue
+				feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
+				natoque aenean scelerisque.</p>
+			<footer>
+				<a href="#" class="button">Continue Reading</a>
+			</footer>
+		</article>
+
+	</div>
+
+	<!-- Features -->
+	<div class="wrapper style1">
+
+		<section id="features" class="container special">
+			<header>
+				<h2>Morbi ullamcorper et varius leo lacus</h2>
+				<p>Ipsum volutpat consectetur orci metus consequat imperdiet
+					duis integer semper magna.</p>
+			</header>
+			<div class="row">
+				<article class="4u special">
+					<a href="#" class="image featured"><img
+						src="resources/images/pic07.jpg" alt="" /></a>
+					<header>
+						<h3>
+							<a href="#">Gravida aliquam penatibus</a>
+						</h3>
+					</header>
+					<p>Amet nullam fringilla nibh nulla convallis tique ante proin
+						sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus
+						cubilia ultrices tempor sagittis. Nisl fermentum consequat integer
+						interdum.</p>
+				</article>
+				<article class="4u special">
+					<a href="#" class="image featured"><img
+						src="resources/images/pic08.jpg" alt="" /></a>
+					<header>
+						<h3>
+							<a href="#">Sed quis rhoncus placerat</a>
+						</h3>
+					</header>
+					<p>Amet nullam fringilla nibh nulla convallis tique ante proin
+						sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus
+						cubilia ultrices tempor sagittis. Nisl fermentum consequat integer
+						interdum.</p>
+				</article>
+				<article class="4u special">
+					<a href="#" class="image featured"><img
+						src="resources/images/pic09.jpg" alt="" /></a>
+					<header>
+						<h3>
+							<a href="#">Magna laoreet et aliquam</a>
+						</h3>
+					</header>
+					<p>Amet nullam fringilla nibh nulla convallis tique ante proin
+						sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus
+						cubilia ultrices tempor sagittis. Nisl fermentum consequat integer
+						interdum.</p>
+				</article>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Tweets -->
+				<section class="4u">
+					<header>
+						<h2 class="icon fa-twitter circled">
+							<span class="label">Tweets</span>
+						</h2>
+					</header>
+					<ul class="divided">
+						<li>
+							<article class="tweet">
+								Amet nullam fringilla nibh nulla convallis tique ante sociis
+								accumsan. <span class="timestamp">5 minutes ago</span>
+							</article>
+						</li>
+						<li>
+							<article class="tweet">
+								Hendrerit rutrum quisque. <span class="timestamp">30
+									minutes ago</span>
+							</article>
+						</li>
+						<li>
+							<article class="tweet">
+								Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
+								<span class="timestamp">3 hours ago</span>
+							</article>
+						</li>
+						<li>
+							<article class="tweet">
+								Lacus natoque cras rhoncus curae dignissim ultricies. Convallis
+								orci aliquet. <span class="timestamp">5 hours ago</span>
+							</article>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Posts -->
+				<section class="4u">
+					<header>
+						<h2 class="icon fa-file circled">
+							<span class="label">Posts</span>
+						</h2>
+					</header>
+					<ul class="divided">
+						<li>
+							<article class="post stub">
+								<header>
+									<h3>
+										<a href="#">Nisl fermentum integer</a>
+									</h3>
+								</header>
+								<span class="timestamp">3 hours ago</span>
+							</article>
+						</li>
+						<li>
+							<article class="post stub">
+								<header>
+									<h3>
+										<a href="#">Phasellus portitor lorem</a>
+									</h3>
+								</header>
+								<span class="timestamp">6 hours ago</span>
+							</article>
+						</li>
+						<li>
+							<article class="post stub">
+								<header>
+									<h3>
+										<a href="#">Magna tempus consequat</a>
+									</h3>
+								</header>
+								<span class="timestamp">Yesterday</span>
+							</article>
+						</li>
+						<li>
+							<article class="post stub">
+								<header>
+									<h3>
+										<a href="#">Feugiat lorem ipsum</a>
+									</h3>
+								</header>
+								<span class="timestamp">2 days ago</span>
+							</article>
+						</li>
+					</ul>
+				</section>
+
+				<!-- Photos -->
+				<section class="4u">
+					<header>
+						<h2 class="icon fa-camera circled">
+							<span class="label">Photos</span>
+						</h2>
+					</header>
+					<div class="row 25% no-collapse">
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic10.jpg" alt="" /></a>
+						</div>
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic11.jpg" alt="" /></a>
+						</div>
+					</div>
+					<div class="row 25% no-collapse">
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic12.jpg" alt="" /></a>
+						</div>
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic13.jpg" alt="" /></a>
+						</div>
+					</div>
+					<div class="row 25% no-collapse">
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic14.jpg" alt="" /></a>
+						</div>
+						<div class="6u">
+							<a href="#" class="image fit"><img
+								src="resources/images/pic15.jpg" alt="" /></a>
+						</div>
+					</div>
+				</section>
 
 			</div>
-			<div class="clear"> </div>
+			<hr />
+			<div class="row">
+				<div class="12u">
+
+					<!-- Contact -->
+					<section class="contact">
+						<header>
+							<h3>Nisl turpis nascetur interdum?</h3>
+						</header>
+						<p>Urna nisl non quis interdum mus ornare ridiculus egestas
+							ridiculus lobortis vivamus tempor aliquet.</p>
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span
+									class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span
+									class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span
+									class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-pinterest"><span
+									class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span
+									class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span
+									class="label">Linkedin</span></a></li>
+						</ul>
+					</section>
+
+					<!-- Copyright -->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved.</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
 		</div>
-			<!---->
-		<div class="content">
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi1.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi2.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi3.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi4.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi5.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi6.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi7.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi8.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid grid9">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi9.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi3.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi6.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi2.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi5.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
-			<div class="content-grid">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox">
-					<img  src="resources/images/pi9.jpg" />
-						<div class="b-wrapper">
-							<h2 class="b-animate b-from-left    b-delay03 ">
-								<span>Cool App Design</span>
-								<p>development, mobile</p>
-								<i> </i>
-							</h2>
-						</div>
-				</a>
-			</div>
+	</div>
+
 </body>
 </html>
+	<script>
+			$(document).ready(function(){
+			$(".bhide").click(function(){
+				$(".hideObj").slideDown();
+				$(this).hide(); //.attr()
+				return false;
+			});
+			$(".bhide2").click(function(){
+				$(".container.hideObj2").slideDown();
+				$(this).hide(); // .attr()
+				return false;
+			});
+				
+			$('.heart').mouseover(function(){
+					$(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+				}).mouseout(function(){
+					$(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+				});
+				
+				function sdf_FTS(_number,_decimal,_separator)
+				{
+				var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
+				var separator=(typeof(_separator)!='undefined')?_separator:'';
+				var r=parseFloat(_number)
+				var exp10=Math.pow(10,decimal);
+				r=Math.round(r*exp10)/exp10;
+				rr=Number(r).toFixed(decimal).toString().split('.');
+				b=rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1"+separator);
+				r=(rr[1]?b+'.'+rr[1]:b);
+
+				return r;
+}
+				
+			setTimeout(function(){
+					$('#counter').text('0');
+					$('#counter1').text('0');
+					$('#counter2').text('0');
+					setInterval(function(){
+						
+						var curval=parseInt($('#counter').text());
+						var curval1=parseInt($('#counter1').text().replace(' ',''));
+						var curval2=parseInt($('#counter2').text());
+						if(curval<=397){
+							$('#counter').text(curval+1);
+						}
+						if(curval1<=3112){
+							$('#counter1').text(sdf_FTS((curval1+20),0,' '));
+						}
+						if(curval2<=168){
+							$('#counter2').text(curval2+1);
+						}
+					}, 2);
+					
+				}, 500);
+			});
+	</script>
