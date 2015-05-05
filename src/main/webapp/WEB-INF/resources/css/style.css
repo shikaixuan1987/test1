@@ -201,18 +201,6 @@ footer {
 	margin: 2.5em 0 0 0;
 }
 
-#row {
-	margin-right: -15px;
-	margin-left: -15px;
-}
-
-#col-md-4
-	{
-	position: relative;
-	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
-}
 
 /* Image */
 .image {

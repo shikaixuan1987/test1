@@ -1,10 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
-<% 
-               String path = request.getContextPath(); 
-               String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
- %>
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<%@ page contentType="text/html; charset=UTF-8" language="java"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,6 +14,11 @@
 <title>beafoodie.com</title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<link rel="stylesheet" href="resources/css/common.css" />
+<link rel="stylesheet" href="resources/css/skel.css" />
+<link rel="stylesheet" href="resources/css/style.css" />
+<link rel="stylesheet" href="resources/css/style-desktop.css" />
+<link rel="stylesheet" href="resources/css/style-noscript.css" />
 <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/jquery.dropotron.min.js"></script>
@@ -20,19 +27,109 @@
 <script src="resources/js/skel.min.js"></script>
 <script src="resources/js/skel-layers.min.js"></script>
 <script src="resources/js/init.js"></script>
-<noscript>
-	<link rel="stylesheet" href="resources/css/skel.css" />
-	<link rel="stylesheet" href="resources/css/style.css" />
-	<link rel="stylesheet" href="resources/css/style-desktop.css" />
-	<link rel="stylesheet" href="resources/css/style-noscript.css" />
-</noscript>
+<script>
+	$(document)
+			.ready(
+					function() {
+						$(".bhide").click(function() {
+							$(".hideObj").slideDown();
+							$(this).hide(); //.attr()
+							return false;
+						});
+						$(".bhide2").click(function() {
+							$(".container.hideObj2").slideDown();
+							$(this).hide(); // .attr()
+							return false;
+						});
+
+						$('.heart').mouseover(
+								function() {
+									$(this).find('i').removeClass('fa-heart-o')
+											.addClass('fa-heart');
+								}).mouseout(
+								function() {
+									$(this).find('i').removeClass('fa-heart')
+											.addClass('fa-heart-o');
+								});
+
+						function sdf_FTS(_number, _decimal, _separator) {
+							var decimal = (typeof (_decimal) != 'undefined') ? _decimal
+									: 2;
+							var separator = (typeof (_separator) != 'undefined') ? _separator
+									: '';
+							var r = parseFloat(_number)
+							var exp10 = Math.pow(10, decimal);
+							r = Math.round(r * exp10) / exp10;
+							rr = Number(r).toFixed(decimal).toString().split(
+									'.');
+							b = rr[0].replace(
+									/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1"
+											+ separator);
+							r = (rr[1] ? b + '.' + rr[1] : b);
+
+							return r;
+						}
+
+						setTimeout(function() {
+							$('#counter').text('0');
+							$('#counter1').text('0');
+							$('#counter2').text('0');
+							setInterval(function() {
+
+								var curval = parseInt($('#counter').text());
+								var curval1 = parseInt($('#counter1').text()
+										.replace(' ', ''));
+								var curval2 = parseInt($('#counter2').text());
+								if (curval <= 397) {
+									$('#counter').text(curval + 1);
+								}
+								if (curval1 <= 3112) {
+									$('#counter1').text(
+											sdf_FTS((curval1 + 20), 0, ' '));
+								}
+								if (curval2 <= 168) {
+									$('#counter2').text(curval2 + 1);
+								}
+							}, 2);
+
+						}, 500);
+					});
+</script>
+<script type="text/javascript">
+	var w, h, className;
+	function getSrceenWH() {
+		w = $(window).width();
+		h = $(window).height();
+		$('#dialogBg').width(w).height(h);
+	}
+	window.onresize = function() {
+		getSrceenWH();
+	}
+	$(window).resize();
+	$(function() {
+		getSrceenWH();
+		//显示弹框
+		$('.box a').click(
+				function() {
+					className = $(this).attr('class');
+					$('#dialogBg').fadeIn(300);
+					$('#dialog').removeAttr('class').addClass(
+							'animated ' + className + '').fadeIn();
+				});
+		//关闭弹窗
+		$('.closeDialogBtn').click(function() {
+			$('#dialogBg').fadeOut(300, function() {
+				$('#dialog').addClass('bounceOutUp').fadeOut();
+			});
+		});
+	});
+</script>
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
 <body class="homepage">
 
 	<!-- Header -->
 	<div id="header">
-
 		<!-- Inner -->
 		<div class="inner">
 			<header>
@@ -43,7 +140,26 @@
 				<p>beafoodie.com</p>
 			</header>
 			<footer>
-				<a href="#banner" class="button circled scrolly">开始</a>
+					<div class="box">
+					    <div class="button circled flipInX">
+						<a href="javascript:;" >登录</a>
+						</div>
+						<div id="dialogBg"></div>
+						<div id="dialog" class="animated">
+							<div class="dialogTop">
+								<a href="javascript:;" class="closeDialogBtn">关闭</a>
+							</div>
+							<form action="" method="post" id="editForm">
+								<ul >
+									<li><label><font color="#ff0000">* </font>user name：<input
+											type="text" name="" required value=""/></label></li>
+									<li><label><font color="#ff0000">* </font>password：<input
+											type="password" name="" required value="" /></label></li>
+									<li><input type="submit" value="submit"/></li>
+								</ul>
+							</form>
+						</div>
+					</div>
 			</footer>
 		</div>
 
@@ -71,32 +187,37 @@
 					</ul></li>
 			</ul>
 		</nav>
-
 	</div>
 
 	<!-- Banner -->
 	<section id="banner">
 		<header>
-			<h2>
-				你好！食客终于等到了你！
-			</h2>
-			<p>在这里，你可以找到美味的食物，新奇的餐厅，志同道合的朋友还有为你私人订制的美食评论！
-			</p>
+			<h2>你好！食客终于等到了你！</h2>
+			<p>在这里，你可以找到美味的食物，新奇的餐厅，志同道合的朋友还有为你私人订制的美食评论！</p>
 		</header>
-					<div style="margin-right: -15px;margin-left: -15px;">
-				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
-					<h3 id="counter">0</h3>
-					<h4><strong>认证餐厅</strong></h4>
-				</div>
-				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
-					<h3 id="counter1">0</h3>
-					<h4><strong>食客成员</strong></h4>
-				</div>
-				<div style="display: inline-block; position: relative;min-height: 1px;padding-right: 100px;padding-left: 100px;">
-					<h3 id="counter2">0</h3>
-					<h4 ><strong>精美食评</strong></h4>
-				</div>
+		<div style="margin-right: -15px; margin-left: -15px;">
+			<div
+				style="display: inline-block; position: relative; min-height: 1px; padding-right: 100px; padding-left: 100px;">
+				<h3 id="counter">0</h3>
+				<h4>
+					<strong>认证餐厅</strong>
+				</h4>
 			</div>
+			<div
+				style="display: inline-block; position: relative; min-height: 1px; padding-right: 100px; padding-left: 100px;">
+				<h3 id="counter1">0</h3>
+				<h4>
+					<strong>食客成员</strong>
+				</h4>
+			</div>
+			<div
+				style="display: inline-block; position: relative; min-height: 1px; padding-right: 100px; padding-left: 100px;">
+				<h3 id="counter2">0</h3>
+				<h4>
+					<strong>精美食评</strong>
+				</h4>
+			</div>
+		</div>
 	</section>
 
 	<!-- Carousel -->
@@ -487,59 +608,3 @@
 
 </body>
 </html>
-	<script>
-			$(document).ready(function(){
-			$(".bhide").click(function(){
-				$(".hideObj").slideDown();
-				$(this).hide(); //.attr()
-				return false;
-			});
-			$(".bhide2").click(function(){
-				$(".container.hideObj2").slideDown();
-				$(this).hide(); // .attr()
-				return false;
-			});
-				
-			$('.heart').mouseover(function(){
-					$(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
-				}).mouseout(function(){
-					$(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
-				});
-				
-				function sdf_FTS(_number,_decimal,_separator)
-				{
-				var decimal=(typeof(_decimal)!='undefined')?_decimal:2;
-				var separator=(typeof(_separator)!='undefined')?_separator:'';
-				var r=parseFloat(_number)
-				var exp10=Math.pow(10,decimal);
-				r=Math.round(r*exp10)/exp10;
-				rr=Number(r).toFixed(decimal).toString().split('.');
-				b=rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g,"\$1"+separator);
-				r=(rr[1]?b+'.'+rr[1]:b);
-
-				return r;
-}
-				
-			setTimeout(function(){
-					$('#counter').text('0');
-					$('#counter1').text('0');
-					$('#counter2').text('0');
-					setInterval(function(){
-						
-						var curval=parseInt($('#counter').text());
-						var curval1=parseInt($('#counter1').text().replace(' ',''));
-						var curval2=parseInt($('#counter2').text());
-						if(curval<=397){
-							$('#counter').text(curval+1);
-						}
-						if(curval1<=3112){
-							$('#counter1').text(sdf_FTS((curval1+20),0,' '));
-						}
-						if(curval2<=168){
-							$('#counter2').text(curval2+1);
-						}
-					}, 2);
-					
-				}, 500);
-			});
-	</script>
