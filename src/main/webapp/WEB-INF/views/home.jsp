@@ -124,8 +124,23 @@
 		});
 	});
 </script>
-<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
+<div id="dialogBg"></div>
+<div id="dialog" class="animated">
+	<div class="dialogTop">
+		<a href="javascript:;" style="text-color: yellow"
+			class="closeDialogBtn"><strong>关闭</strong></a>
+		<form action="#">
+				<i class="fa fa-user"></i><input type="text" class="form-control" placeholder="用户名">
+			<br>
+				<i class="fa fa-lock"></i><input type="password" class="form-control" placeholder="密码">
+				<br></br>
+			<button type="submit" class="float"
+				style="background-color: #EF8376; width: 100px; height: 50px; position:relative; color:white; font-size:20px;">登录</button>
+		</form>
+	</div>
+
+</div>
 <body class="homepage">
 
 	<!-- Header -->
@@ -140,26 +155,11 @@
 				<p>beafoodie.com</p>
 			</header>
 			<footer>
-					<div class="box">
-					    <div class="button circled flipInX">
-						<a href="javascript:;" >登录</a>
-						</div>
-						<div id="dialogBg"></div>
-						<div id="dialog" class="animated">
-							<div class="dialogTop">
-								<a href="javascript:;" class="closeDialogBtn">关闭</a>
-							</div>
-							<form action="" method="post" id="editForm">
-								<ul >
-									<li><label><font color="#ff0000">* </font>user name：<input
-											type="text" name="" required value=""/></label></li>
-									<li><label><font color="#ff0000">* </font>password：<input
-											type="password" name="" required value="" /></label></li>
-									<li><input type="submit" value="submit"/></li>
-								</ul>
-							</form>
-						</div>
+				<div class="box">
+					<div class="button circled flipInX">
+						<a href="javascript:;">登录</a>
 					</div>
+				</div>
 			</footer>
 		</div>
 
