@@ -221,8 +221,8 @@ opacity
 }
 
 #dialog {
-	width: 450px;
-	height: 450px;
+	width: 400px;
+	height: 500px;
 	margin: 0 auto;
 	display: none;
 	background-color: #37253A;
@@ -247,3 +247,22 @@ opacity
 	padding: 10px 0;
 	text-align: right;
 }
+#user-label2 {
+    position: relative;
+    left:55px;
+}
+
+#user-label2 .fa-user {
+    color: #666;
+    top: 23px;
+    left: 5px;
+    position: absolute;
+}
+#user-label2 .fa-lock {
+    color: #666;
+    top: 23px;
+    left: 5px;
+    position: absolute;
+}
+
+   

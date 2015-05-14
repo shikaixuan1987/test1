@@ -128,19 +128,23 @@
 <div id="dialogBg"></div>
 <div id="dialog" class="animated">
 	<div class="dialogTop">
-		<a href="javascript:;" style="text-color: yellow"
-			class="closeDialogBtn"><strong>关闭</strong></a>
+		<a href="javascript:;" class="closeDialogBtn"><font COLOR="######"><strong>关闭</strong></font></a>
+		</div>
+		<h1 style="color:white; padding-left: 85px;">欢迎回来！</h1>
+		<br>
 		<form action="#">
-				<i class="fa fa-user"></i><input type="text" class="form-control" placeholder="用户名">
-			<br>
-				<i class="fa fa-lock"></i><input type="password" class="form-control" placeholder="密码">
+		<label id="user-label2">
+				<i class="fa fa-user"></i><input type="text" class="form-control" style="padding-left: 35px;width:300px;" placeholder="用户名">
+				</label>
+					<label id="user-label2">
+				<i class="fa fa-lock"></i><input type="password" class="form-control" style=" padding-left: 35px; width:300px;"placeholder="密码">
+				</label>
 				<br></br>
 			<button type="submit" class="float"
 				style="background-color: #EF8376; width: 100px; height: 50px; position:relative; color:white; font-size:20px;">登录</button>
+				
 		</form>
 	</div>
-
-</div>
 <body class="homepage">
 
 	<!-- Header -->
