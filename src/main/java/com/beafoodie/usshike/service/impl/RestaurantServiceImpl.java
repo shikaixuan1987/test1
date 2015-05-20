@@ -18,8 +18,8 @@ public class RestaurantServiceImpl implements RestaurantService {
        private RestaurantDao restaurantDao;
 
        @Transactional
-       public void saveRestaurant(Restaurant restaurant) {
-    	   restaurantDao.saveRestaurant(restaurant);
+       public void addRestaurant(Restaurant restaurant) {
+    	   restaurantDao.addRestaurant(restaurant);
        }
 
        @Transactional( readOnly = true)
@@ -37,5 +37,6 @@ public class RestaurantServiceImpl implements RestaurantService {
     	   restaurantDao.deleteRestaurant(id);
 
        }
+
 
 }

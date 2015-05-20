@@ -171,7 +171,7 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="/usshike/">主页</a></li>
-				<li><a href="left-sidebar.html">去哪吃</a></li>
+				<li><a href="restaurants">去哪吃</a></li>
 				<li><a href="right-sidebar.html">食客榜</a></li>
 				<li><a href="no-sidebar.html">食客圈</a></li>
 				<li><a href="no-sidebar.html">食客新闻</a></li>

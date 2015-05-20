@@ -39,7 +39,7 @@
 <body
 	style="background: url('resources/images/bg.jpg'); background-size: cover; background-position: center center; background-attachment: fixed;">
 	<!-- Header -->
-	<div id="header">
+	<div id="header1">
 
 		<!-- Inner -->
 		<div class="inner">
@@ -186,9 +186,9 @@
 		</div>
 		<div class="loader_main">
 			<div class="buttons">
-				<button class="bg1">食客游戏</button>
-				<button class="bg2">验证餐厅</button>
-				<button class="bg3">啦啦啦</button>
+				<button id="playGame" class="bg1">食客游戏</button>
+				<button onclick="location.href = 'addRestaurantPage';" class="bg2">添加餐厅</button>
+				<button id="verifyRestaurant"class="bg3">验证餐厅</button>
 				<button class="bg4">嗷嗷嗷</button>
 			</div>
 		</div>

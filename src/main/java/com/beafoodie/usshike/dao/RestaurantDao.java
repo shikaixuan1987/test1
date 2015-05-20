@@ -9,7 +9,7 @@ public interface RestaurantDao {
     /*
      * CREATE and UPDATE
      */
-    public void saveRestaurant(Restaurant restaurant); // create and update
+    public void addRestaurant(Restaurant restaurant); // create and update
 
     /*
      * READ

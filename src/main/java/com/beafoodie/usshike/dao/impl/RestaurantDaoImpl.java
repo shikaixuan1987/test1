@@ -17,7 +17,7 @@ public class RestaurantDaoImpl implements RestaurantDao {
        @Autowired
        private SessionFactory sessionFactory;
 
-       public void saveRestaurant(Restaurant restaurant) {
+       public void addRestaurant(Restaurant restaurant) {
               
               getSession().saveOrUpdate(restaurant);
               getSession().flush();

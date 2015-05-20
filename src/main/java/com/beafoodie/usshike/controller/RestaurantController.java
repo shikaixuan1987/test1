@@ -14,20 +14,24 @@ import com.beafoodie.usshike.model.Restaurant;
 import com.beafoodie.usshike.service.RestaurantService;
 
 @Controller
-@RequestMapping("/restaurant")
 public class RestaurantController {
 
 	@Autowired
 	private RestaurantService restaurantService;
+	
+	@RequestMapping(value = "/addRestaurantPage", method = RequestMethod.GET)
+	public String addRestaurantPage(Map<String, Object> map) {
+		return "addRestaurantPage";
+	}
 
-	@RequestMapping(value = { "/", "/listRestaurants" })
-	public String listBooks(Map<String, Object> map) {
+	@RequestMapping(value = "/restaurants", method = RequestMethod.GET )
+	public String restaurants(Map<String, Object> map) {
 
-		map.put("restaurant", new Restaurant());
+		//map.put("restaurant", new Restaurant());
 
-		map.put("restaurantList", restaurantService.listRestaurants());
+	//	map.put("restaurantList", restaurantService.listRestaurants());
 
-		return "/restaurant/listRestaurants";
+		return "restaurants";
 	}
 
 	@RequestMapping("/get/{restaurantId}")
@@ -46,7 +50,7 @@ public class RestaurantController {
 			@ModelAttribute("restaurant") Restaurant restaurant,
 			BindingResult result) {
 
-		restaurantService.saveRestaurant(restaurant);
+		restaurantService.addRestaurant(restaurant);
 
 		/*
 		 * Note that there is no slash "/" right after "redirect:" So, it

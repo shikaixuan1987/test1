@@ -9,7 +9,7 @@ public interface RestaurantService {
 	/*
 	 * CREATE and UPDATE
 	 */
-	public void saveRestaurant(Restaurant restaurant);
+	public void addRestaurant(Restaurant restaurant);
 
 	/*
 	 * READ

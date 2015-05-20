@@ -201,7 +201,6 @@ body {
 	background: rgba(255, 255, 255, 0.18);
 }
 .login_form span{
-	display: block;
 	color: #ffffff;
 	font-size: 1em;
 	text-transform: capitalize;
@@ -215,11 +214,10 @@ body {
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	padding: 20px 15px;
-	display: block;
 	width: 88%;
 	background: rgba(255, 255, 255, 0.42);
 	outline: none;
-	color: #ffffff;
+	color: #000000;
 	font-size: 0.9125em;
 	border: none;
 	-webkit-appearance: none;
@@ -227,6 +225,42 @@ body {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-o-border-radius: 10px;
+}
+.login_form form input[type="tel"]{
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	padding: 20px 15px;
+	display: block;
+	height:65px;
+	width: 88%;
+	background: rgba(255, 255, 255, 0.42);
+	outline: none;
+	color: #000000;
+	font-size: 0.9125em;
+	border: none;
+	-webkit-appearance: none;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.login_form form select{
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	padding: 20px 15px;
+	display: block;
+	width: 88%;
+	background: rgba(255, 255, 255, 0.42);
+	outline: none;
+	color: #000000;
+	font-size: 0.9125em;
+	border: none;
+	-webkit-appearance: none;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+   -moz-appearance: none;
+   appearance: none;
 }
 .login_form form input[type="password"]{
 	font-weight: 400;
@@ -236,7 +270,7 @@ body {
 	width: 88%;
 	background: rgba(255, 255, 255, 0.15);
 	outline: none;
-	color: #ffffff;
+	color: #000000;
 	font-size: 0.9125em;
 	border: none;
 	-webkit-appearance: none;
